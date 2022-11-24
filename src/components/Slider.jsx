@@ -51,16 +51,16 @@ const Slide = styled.div`
 
 const ImgContainer = styled.div`
     width: 50vw;
+    height: 100vh;
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center; 
-    
 `
 
 const Img = styled.img`
     width: 100%;
-    height: 90%;
+    height: 95%;
     object-fit: cover;
 `
 
@@ -95,6 +95,7 @@ const Btn = styled.div`
     cursor: pointer;
     transition: .2s;
     z-index: 1;
+    overflow: hidden;
     
     &::before{
         content: '';
@@ -113,7 +114,7 @@ const Btn = styled.div`
     }
 
     &:hover::before{
-        height: 100%;
+        height: 120%;
     }
 `
 

@@ -1,3 +1,4 @@
+import Categories from "../components/Categories"
 import Discounts from "../components/Discounts"
 import Navbar from "../components/Navbar"
 import Slider from "../components/Slider"
@@ -8,6 +9,7 @@ const Home = () => {
             <Discounts />
             <Navbar />
             <Slider />
+            <Categories />
         </div>
     )
 }

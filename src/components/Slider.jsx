@@ -133,7 +133,7 @@ const Slider = () => {
             sliderIndex < sliderLength - 1 ? setSliderIndex(sliderIndex + 1) : setSliderIndex(0)
         }, [3000]
         );
-    }, [sliderIndex])
+    }, [sliderIndex, sliderLength])
 
 
     return (

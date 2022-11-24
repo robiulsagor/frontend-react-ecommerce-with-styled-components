@@ -131,6 +131,7 @@ const Slider = () => {
     useEffect(() => {
         setTimeout(() => {
             sliderIndex < sliderLength - 1 ? setSliderIndex(sliderIndex + 1) : setSliderIndex(0)
+            console.log(sliderIndex);
         }, [3000]
         );
     }, [sliderIndex, sliderLength])

@@ -52,10 +52,10 @@ const Slide = styled.div`
 const ImgContainer = styled.div`
     width: 50vw;
     flex: 1;
-    border: 1px solid red;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+    
 `
 
 const Img = styled.img`

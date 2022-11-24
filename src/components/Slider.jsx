@@ -1,5 +1,5 @@
 import { ArrowLeft, ArrowRight } from "@mui/icons-material"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import styled from "styled-components"
 import { sliderItems } from "../data"
 
@@ -127,6 +127,13 @@ const Slider = () => {
             sliderIndex < sliderLength - 1 ? setSliderIndex(sliderIndex + 1) : setSliderIndex(0)
         console.log(sliderIndex, " = ", sliderIndex * 100, " vw");
     }
+
+    useEffect(() => {
+        setTimeout(() => {
+            sliderIndex < sliderLength - 1 ? setSliderIndex(sliderIndex + 1) : setSliderIndex(0)
+        }, [3000]
+        );
+    }, [sliderIndex])
 
 
     return (

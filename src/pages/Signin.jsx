@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Container = styled.div`
     padding: 50px 30px;
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
     background-size: 100% ;
     width: 100%;
     height: 100vh;

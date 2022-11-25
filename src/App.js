@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react';
 import './App.css';
-import Product from './pages/Product';
+import Cart from './pages/Cart';
 
 export const DiscountContext = createContext()
 
@@ -8,7 +8,7 @@ function App() {
   const [showDiscount, setShowDiscount] = useState(true)
   return (
     <DiscountContext.Provider value={[showDiscount, setShowDiscount]}>
-      <Product />
+      <Cart />
     </DiscountContext.Provider>
   );
 }

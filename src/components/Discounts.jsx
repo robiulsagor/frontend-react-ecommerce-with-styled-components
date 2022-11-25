@@ -31,6 +31,7 @@ const Icon = styled.div`
 
 const Discounts = () => {
     const discount = useContext(DiscountContext)
+
     const closeDiscount = () => {
         discount[1](false)
     }

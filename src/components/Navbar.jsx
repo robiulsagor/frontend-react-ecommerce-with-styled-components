@@ -44,6 +44,12 @@ const SearchIcon = styled.div`
     align-items: center;
     justify-content: center;
     color: #666;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover{
+        color: #aaa;
+    }
 `
 
 const Center = styled.div`

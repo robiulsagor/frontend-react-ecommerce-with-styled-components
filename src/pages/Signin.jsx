@@ -1,8 +1,10 @@
 import styled from "styled-components"
+import { mobile, lmobile, tablet, laptop, desktop } from "../responsive"
+
 
 const Container = styled.div`
     padding: 50px 30px;
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
     background-size: 100% ;
     width: 100%;
     height: 100vh;
@@ -10,6 +12,10 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    ${mobile({ backgroundSize: '380%' })}
+    ${lmobile({ backgroundSize: '340%' })}
+    ${tablet({ backgroundSize: '150%' })}
+    ${laptop({ backgroundSize: '120%' })}
 `
 
 const Wrapper = styled.div`
@@ -17,7 +23,10 @@ const Wrapper = styled.div`
     background: rgba(255,255, 255,0.8);
     padding:20px;
     border-radius: 10px;
-
+    ${mobile({ width: '100%', padding: '14px' })}
+    ${lmobile({ width: '90%', padding: '15px' })}
+    ${tablet({ width: '60%', maxWidth: '400px', minWidth: '300px', padding: '16px' })}
+    ${laptop({ width: '40%', padding: '20px' })}
 `
 
 const Title = styled.h1`
@@ -25,6 +34,10 @@ const Title = styled.h1`
     text-transform: uppercase;
     font-weight: 500;
     margin-bottom: 35px;
+    ${mobile({ fontSize: '22px' })}
+    ${lmobile({ fontSize: '23px' })}
+    ${tablet({ fontSize: '26px' })}
+    ${laptop({ fontSize: '30px' })}
 `
 
 const Form = styled.form`
@@ -48,12 +61,10 @@ const Input = styled.input`
     &:focus{
         outline: 1px solid teal;
     }
-    `
-
-const Agreement = styled.p`
-    margin: 16px 0;
-    font-size: 14px;
-    color: #444;
+     ${mobile({ fontSize: '13px', padding: '10px' })}
+    ${lmobile({ fontSize: '14px', padding: '10px' })}
+    ${tablet({ fontSize: '15px', padding: '10px' })}
+    ${laptop({ fontSize: '16px', padding: '10px' })}
 `
 
 const Btn = styled.button`
@@ -73,6 +84,10 @@ const Btn = styled.button`
         background: #ccc;
         color: #444;
     }
+    ${mobile({ fontSize: '14px' })}
+    ${lmobile({ fontSize: '15px' })}
+    ${tablet({ fontSize: '16px' })}
+    ${laptop({ fontSize: '17px' })}
     `
 
 const BottomLink = styled.a`
@@ -86,6 +101,10 @@ const BottomLink = styled.a`
     &:hover{
         color: #999;
     }
+    ${mobile({ fontSize: '14px' })}
+    ${lmobile({ fontSize: '15px' })}
+    ${tablet({ fontSize: '16px' })}
+    ${laptop({ fontSize: '17px' })}
 `
 
 const Signin = () => {

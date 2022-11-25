@@ -2,6 +2,7 @@ import { Close } from "@mui/icons-material"
 import { useContext } from "react"
 import { DiscountContext } from "../App"
 import styled from "styled-components"
+import { mobile, lmobile, tablet, laptop, desktop } from "../responsive"
 
 const Container = styled.div`
     background: teal;
@@ -13,11 +14,13 @@ const Container = styled.div`
 const Text = styled.span`
     font-size: 16px;
     color: #e0e0e0;
+    ${mobile({ fontSize: '13px' })};
+    ${lmobile({ fontSize: '15px' })};
 `
 
 const Icon = styled.div`
     position: absolute;
-    right: 10px;
+    right: 3px;
     top:50%;
     transform: translateY(-50%);
     color: #e0e0e0;

@@ -1,33 +1,58 @@
 import { EmailOutlined, FacebookRounded, Instagram, PhoneOutlined, Pinterest, Room, Twitter } from "@mui/icons-material"
 import styled from "styled-components"
+import { mobile, lmobile, tablet, laptop, desktop } from "../responsive"
 
 const Container = styled.div`
     padding: 50px 30px;
-    display: flex;gap: 80px;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 80px;
+    ${mobile({ flexDirection: 'column', padding: '25px 12px', gap: '20px' })};
+    ${lmobile({ flexDirection: 'column', padding: '25px 20px', gap: '20px' })};
+    ${tablet({ flexWrap: 'wrap', padding: '25px 20px', gap: '26px' })};
 `
 
 const Left = styled.div`
-    flex: 1;
+    flex:1;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    ${mobile({ gap: '13px' })};
+    ${lmobile({ gap: '15px' })};
+    ${tablet({ gap: '18px', minWidth: '320px' })};
+    ${laptop({ gap: '18px', })};
+
 `
 
 const Logo = styled.div`
     font-size: 35px;
     font-weight: 700;
+    ${mobile({ fontSize: '23px', fontWeight: '600' })};
+    ${lmobile({ fontSize: '26px', fontWeight: '600' })};
+    ${tablet({ fontSize: '29px', fontWeight: '600' })};
+    ${laptop({ fontSize: '32px', fontWeight: '600' })};
 `
 
-const Desc = styled.div`
-    color: #555;
+const Desc = styled.p`
+    color: #556;
     letter-spacing: 1px;
     text-align: justify;
     font-weight: 500;
+
+    ${mobile({ fontSize: '12px' })};
+    ${lmobile({ fontSize: '14px' })};
+    ${tablet({ fontSize: '14px' })};
+    ${laptop({ fontSize: '14px' })};
+
 `
 
 const SocialIconContainer = styled.div`
     display: flex;
     gap: 15px;
+    margin-left: -10px;
+    ${mobile({ gap: '0px' })};
+    ${lmobile({ gap: '4px' })};
+    ${tablet({ gap: '4px' })};
 `
 
 const SocialIcon = styled.div`
@@ -47,16 +72,27 @@ const SocialIcon = styled.div`
         color: ${props => props.bg};
         background: #d0d0d0;
     }
+
+    ${mobile({ transform: 'scale(0.7)' })};
+    ${lmobile({ transform: 'scale(0.8)' })};
+    ${tablet({ transform: 'scale(0.8)' })};
 `
 
 const Center = styled.div`
     flex: 1;
+    ${mobile({ display: 'none' })};
+    ${lmobile({ display: 'none' })};
+    ${tablet({ display: 'none' })};
 `
 
-const LinksTitle = styled.div`
+const LinksTitle = styled.h1`
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 45px
+    margin-bottom: 45px;
+    ${mobile({ marginBottom: '12px', fontSize: '19px', fontWeight: '500' })};
+    ${lmobile({ marginBottom: '22px', fontSize: '22px', fontWeight: '500' })};
+    ${tablet({ marginBottom: '22px', fontSize: '23px', fontWeight: '500' })};
+    ${laptop({ marginBottom: '22px', fontSize: '23px', fontWeight: '500' })};
 `
 
 const LinksContainer = styled.ul`
@@ -67,17 +103,20 @@ const LinksContainer = styled.ul`
     gap: 20px;
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    ${laptop({ gap: '15px' })};
+    
     `
 
 const LinksList = styled.li`
+    font-size: 16px;
     flex: 1;
     min-width: 40%;
+    ${laptop({ fontSize: '15px' })};
+
 `
 
 const Right = styled.div`
     flex: 1;
-   
 `
 
 const ContactContainer = styled.ul`
@@ -87,16 +126,26 @@ const ContactContainer = styled.ul`
     margin: 0;
     padding: 0;
     list-style-type: none;
+    ${mobile({ fontSize: '12px', gap: '5px' })};
+    ${lmobile({ fontSize: '15px', gap: '5px' })};
+    ${tablet({ fontSize: '15px', gap: '5px' })};
 `
 
 const ContactList = styled.li`
     display: flex;
     align-items: center;
     gap: 15px;
+    ${mobile({ gap: '1px', marginLeft: '-4px' })};
+    ${lmobile({ gap: '5px' })};
+    ${laptop({ fontSize: '15px', gap: '8px' })};
+
 `
 
 const ContactIconContainer = styled.div`
-
+    ${mobile({ transform: 'scale(.6)' })};
+    ${lmobile({ transform: 'scale(.7)' })};
+    ${tablet({ transform: 'scale(.8)' })};
+    ${laptop({ transform: 'scale(.9)' })};
 `
 
 const ContactDetails = styled.div`

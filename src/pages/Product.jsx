@@ -2,28 +2,36 @@ import { Add, Remove } from "@mui/icons-material"
 import { useContext, useState } from "react"
 import styled from "styled-components"
 import { DiscountContext } from "../App"
-import Discounts from "../components/Discounts"
 import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
+import MobileNavbar from "../components/MobileNavbar"
+import NavTemplate from "../components/NavTemplate"
+import { mobile, lmobile, tablet, laptop, desktop } from "../responsive"
 
 const Container = styled.div`
     padding: 50px 30px;
-
+    ${mobile({ padding: '30px 15px' })}
+    ${lmobile({ padding: '30px 20px' })}
+    ${tablet({ padding: '30px 20px' })}
 `
 
 const Wrapper = styled.div`
     display: flex;
     gap: 50px;
+    ${mobile({ flexDirection: 'column' })}
+    ${lmobile({ flexDirection: 'column' })}
+    ${tablet({ flexDirection: 'column' })}
 `
 
 const ImgContainer = styled.div`
     flex: 1;
     height: 70vh;
+    overflow: hidden;
+    ${tablet({ maxHeight: '50vh' })}
 `
 
 const Img = styled.img`
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 `
 
@@ -34,22 +42,33 @@ const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    ${mobile({ padding: '0 ' })}
+    ${lmobile({ padding: '0 ' })}
+    ${tablet({ padding: '0 ' })}
+
 `
 
 const Title = styled.div`
     font-size: 35px;
     font-weight: 600;
+
+    ${mobile({ fontSize: '30px' })}
+    ${lmobile({ fontSize: '32px' })}
     `
 
 const Desc = styled.p`
     color: #444;
     letter-spacing: 2px;
     text-align: justify;
+    ${mobile({ fontSize: '13px' })}
+    ${lmobile({ fontSize: '14px' })}
 
 `
 const Price = styled.span`
     font-size: 35px;
-    font-weight: 500
+    font-weight: 500;
+    ${mobile({ fontSize: '25px' })}
+    ${lmobile({ fontSize: '27px' })}
 
 `
 const OptionContainer = styled.div`
@@ -57,6 +76,11 @@ const OptionContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 60%;
+    ${mobile({ width: '100%' })}
+    ${lmobile({ width: '100%' })}
+    ${tablet({ width: '100%' })}
+    ${laptop({ width: '90%' })}
+
 `
 
 const OptionLeft = styled.div`
@@ -73,6 +97,10 @@ const OptionRight = styled.div`
 const OptionText = styled.div`
     font-size: 20px;
     font-weight: 500;
+    ${mobile({ fontSize: '16px' })}
+    ${lmobile({ fontSize: '17px' })}
+    ${tablet({ fontSize: '19px' })}
+
 `
 
 const OptionColor = styled.div`
@@ -81,12 +109,19 @@ const OptionColor = styled.div`
     border-radius: 50%;
     background: ${props => props.color};
     cursor: pointer;
+    ${mobile({ width: '18px', height: '18px' })}
+    ${lmobile({ width: '20px', height: '20px' })}
+    ${tablet({ width: '22px', height: '22px' })}
+
 `
 
 const OptionSelect = styled.select`
     font-size: 15px;
     font-weight: 500;
     padding:5px 10px;
+    ${mobile({ fontSize: '12px' })}
+    ${lmobile({ fontSize: '13px' })}
+    ${tablet({ fontSize: '14px' })}
 `
 const OptionOption = styled.option``
 
@@ -96,6 +131,10 @@ const CartAmountBtnContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
+    ${mobile({ width: "100%", marginTop: '10px' })}
+    ${lmobile({ width: "100%", marginTop: '10px' })}
+    ${tablet({ width: "100%", marginTop: '10px' })}
+    ${laptop({ width: "90%", marginTop: '10px' })}
 `
 
 const CartAmountContainer = styled.div`
@@ -112,6 +151,8 @@ const CartRemoveAmountIconContainer = styled.div`
     &:hover{
         opacity: .3
     }
+
+    ${mobile({ transform: 'scale(.7)' })}
 `
 const CartAddAmountIconContainer = styled.div`
     transition:.2s;
@@ -121,12 +162,18 @@ const CartAddAmountIconContainer = styled.div`
     &:hover{
         opacity: .3
     }
+    ${mobile({ transform: 'scale(.7)' })}
+    ${lmobile({ transform: 'scale(.8)' })}
+    ${tablet({ transform: 'scale(.9)' })}
 `
 
 const CartAmount = styled.span`
     border: 1px solid #555;
     border-radius: 8px;
     padding: 5px 8px;
+    ${mobile({ fontSize: '14px' })}
+    ${lmobile({ fontSize: '15px' })}
+    ${tablet({ fontSize: '16px' })}
 `
 
 const CartBtn = styled.button`
@@ -143,6 +190,10 @@ const CartBtn = styled.button`
     &:hover{
         opacity: .8
     }
+
+    ${mobile({ fontSize: '14px' })}
+    ${lmobile({ fontSize: '15px' })}
+    ${tablet({ fontSize: '16px' })}
 `
 
 
@@ -156,8 +207,9 @@ const Product = () => {
 
     return (
         <>
-            {discount[0] && <Discounts />}
-            <Navbar />
+            {/* {discount[0] && <Discounts />} */}
+            <NavTemplate />
+            <MobileNavbar />
             <Container>
                 <Wrapper>
                     <ImgContainer>

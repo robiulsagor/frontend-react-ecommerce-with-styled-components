@@ -1,4 +1,6 @@
+import { padding } from "@mui/system"
 import styled from "styled-components"
+import { mobile, lmobile, tablet, laptop, desktop } from "../responsive"
 
 const Container = styled.div`
     padding: 50px 30px;
@@ -10,6 +12,10 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    ${mobile({ backgroundSize: '280%' })}
+    ${lmobile({ backgroundSize: '240%' })}
+    ${tablet({ backgroundSize: '150%' })}
+    ${laptop({ backgroundSize: '100%' })}
 `
 
 const Wrapper = styled.div`
@@ -17,6 +23,10 @@ const Wrapper = styled.div`
     background: rgba(255,255, 255,0.8);
     padding:20px;
     border-radius: 10px;
+    ${mobile({ width: '98%', padding: '14px' })}
+    ${lmobile({ width: '96%', padding: '15px' })}
+    ${tablet({ width: '80%', padding: '16px' })}
+    ${laptop({ width: '60%', padding: '20px' })}
 
 `
 
@@ -25,6 +35,10 @@ const Title = styled.h1`
     text-transform: uppercase;
     font-weight: 500;
     margin-bottom: 35px;
+    ${mobile({ fontSize: '22px' })}
+    ${lmobile({ fontSize: '23px' })}
+    ${tablet({ fontSize: '26px' })}
+    ${laptop({ fontSize: '30px' })}
 `
 
 const Form = styled.form`
@@ -32,6 +46,10 @@ const Form = styled.form`
     display: flex;
     flex-wrap: wrap;
     gap: 20px 15px;
+    ${mobile({ gap: '12px 8px' })}
+    ${lmobile({ gap: '13px 9px' })}
+    ${tablet({ gap: '15px 10px' })}
+    ${laptop({ gap: '18px 12px' })}
 `
 
 const Input = styled.input`
@@ -47,12 +65,20 @@ const Input = styled.input`
     &:focus{
         outline: 1px solid teal;
     }
+    ${mobile({ fontSize: '13px', padding: '6px' })}
+    ${lmobile({ fontSize: '14px', padding: '6px' })}
+    ${tablet({ fontSize: '15px', padding: '6px' })}
+    ${laptop({ fontSize: '16px', padding: '10px' })}
     `
 
 const Agreement = styled.p`
     margin: 16px 0;
     font-size: 14px;
     color: #444;
+    ${mobile({ fontSize: '12px' })}
+    ${lmobile({ fontSize: '13px' })}
+    ${tablet({ fontSize: '14px' })}
+    ${laptop({ fontSize: '15px' })}
 `
 
 const Btn = styled.button`
@@ -72,6 +98,10 @@ const Btn = styled.button`
         background: #ccc;
         color: #444;
     }
+    ${mobile({ fontSize: '14px' })}
+    ${lmobile({ fontSize: '15px' })}
+    ${tablet({ fontSize: '16px' })}
+    ${laptop({ fontSize: '17px' })}
     `
 
 const Register = () => {

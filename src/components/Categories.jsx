@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { categories } from "../data"
 import CategoryItem from "./CategoryItem"
+import { mobile, lmobile, tablet, laptop, desktop } from "../responsive"
 
 const Container = styled.div`
     margin: 40px 30px;
@@ -8,6 +9,9 @@ const Container = styled.div`
     gap: 18px;
     border-radius: 10px;
     overflow: hidden;
+
+    ${mobile({ flexDirection: 'column' })};
+    ${lmobile({ flexDirection: 'column' })};
 `
 
 const Categories = () => {

@@ -1,13 +1,17 @@
 import { ArrowLeft, ArrowRight } from "@mui/icons-material"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import styled from "styled-components"
 import { sliderItems } from "../data"
+import { mobile, lmobile, tablet, laptop, desktop } from "../responsive"
 
 const Container = styled.div`
     height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
+    ${mobile({ display: 'none' })};
+    ${lmobile({ display: 'none' })};
+    ${tablet({ display: 'none' })};
 `
 
 const ArrowContainer = styled.div`
@@ -127,15 +131,6 @@ const Slider = () => {
             sliderIndex < sliderLength - 1 ? setSliderIndex(sliderIndex + 1) : setSliderIndex(0)
         console.log(sliderIndex, " = ", sliderIndex * 100, " vw");
     }
-
-    useEffect(() => {
-        setTimeout(() => {
-            sliderIndex < sliderLength - 1 ? setSliderIndex(sliderIndex + 1) : setSliderIndex(0)
-            console.log(sliderIndex);
-        }, [3000]
-        );
-    }, [sliderIndex, sliderLength])
-
 
     return (
         <Container>
